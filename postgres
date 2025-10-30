@@ -4,7 +4,7 @@ name: nomeDoProjeto
 services:
   postgres:
     image: postgres
-    container_name: postgres
+    container_name: postgres-container
     restart: always
     environment:
       POSTGRES_USER: postgres
