@@ -10,6 +10,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: dbname
+    volumes:
+      - db_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -22,4 +24,6 @@ services:
       PMA_PASSWORD: 123456
     depends_on:
       - mysql
-      
+
+volumes:
+  db_data:
