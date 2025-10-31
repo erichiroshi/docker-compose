@@ -1,5 +1,3 @@
-version: '3.8'
-
 name: nomeDoProjeto
 services:
   mysql:
@@ -8,13 +6,13 @@ services:
     ports:
       - '3306:3306'
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: dbname
+      MYSQL_ROOT_PASSWORD: 123456
     volumes:
       - db_data:/var/lib/mysql
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin:latest
     container_name: phpmyadmin-container
     ports:
       - "8081:80"
